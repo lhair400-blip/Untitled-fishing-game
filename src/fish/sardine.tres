@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://80puhijlci2m"]
+
+[ext_resource type="Script" uid="uid://bvcl7tp5iwcs6" path="res://src/components/fishdata.gd" id="1_bwu0q"]
+[ext_resource type="Texture2D" uid="uid://bg16brntc0gl0" path="res://Assets/fish/Sardine.png" id="2_8wvbk"]
+
+[resource]
+script = ExtResource("1_bwu0q")
+name = "Sardine"
+description = "A small fish"
+region = 2
+sprite = ExtResource("2_8wvbk")
+metadata/_custom_type_script = "uid://bvcl7tp5iwcs6"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" format=3 uid="uid://cv4j7m6u6ohlt"]
+
+[ext_resource type="Script" uid="uid://bvcl7tp5iwcs6" path="res://src/components/fishdata.gd" id="1_ib8r5"]
+[ext_resource type="Texture2D" uid="uid://5fwd7pt56isu" path="res://Assets/fish/Herring.png" id="2_gb4vs"]
+
+[resource]
+script = ExtResource("1_ib8r5")
+name = "herring"
+description = "A herring"
+rarity = 1
+region = 1
+sprite = ExtResource("2_gb4vs")
+min_weight = 2.0
+max_weight = 5.0
+metadata/_custom_type_script = "uid://bvcl7tp5iwcs6"

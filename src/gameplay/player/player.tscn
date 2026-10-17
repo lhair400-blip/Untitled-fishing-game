@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://fw5tnuy5fgf6"]
+
+[ext_resource type="Script" uid="uid://bmyrrx0ligvj3" path="res://src/gameplay/player/player.gd" id="1_sjr3t"]
+[ext_resource type="Texture2D" uid="uid://f00fu77evrvv" path="res://Assets/base/Light blue.png" id="2_kjyqo"]
+[ext_resource type="Script" uid="uid://cw7shsgafuc67" path="res://src/components/movement_component.gd" id="3_d3trc"]
+[ext_resource type="Script" uid="uid://dbu5t1bwq1xd1" path="res://src/components/input component.gd" id="3_sjr3t"]
+[ext_resource type="Script" uid="uid://v28md2hdwavj" path="res://src/components/fishing_component.gd" id="5_d3trc"]
+[ext_resource type="PackedScene" uid="uid://bp46r1xanfatq" path="res://src/gameplay/fishing_minigame.tscn" id="7_kjyqo"]
+[ext_resource type="Script" uid="uid://d2wr1pkkl1feo" path="res://src/components/fish_table_component.gd" id="7_uia4o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uia4o"]
+atlas = ExtResource("2_kjyqo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxsvo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uia4o")
+}],
+"loop": true,
+"name": &"Idle test",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f60y1"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1646162788]
+script = ExtResource("1_sjr3t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=918309859]
+sprite_frames = SubResource("SpriteFrames_dxsvo")
+animation = &"Idle test"
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=700744354]
+scale = Vector2(0.78, 0.78)
+shape = SubResource("RectangleShape2D_f60y1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1523473972]
+zoom = Vector2(4, 4)
+
+[node name="Fishing minigame" parent="." unique_id=696968778 instance=ExtResource("7_kjyqo")]
+position = Vector2(-15, -28)
+
+[node name="Components" type="Node" parent="." unique_id=824056088]
+
+[node name="Movement" type="Node" parent="Components" unique_id=1277573490 node_paths=PackedStringArray("body")]
+script = ExtResource("3_d3trc")
+body = NodePath("../..")
+
+[node name="Input" type="Node" parent="Components" unique_id=284254323]
+script = ExtResource("3_sjr3t")
+
+[node name="Fishing" type="Node" parent="Components" unique_id=631198394]
+script = ExtResource("5_d3trc")
+
+[node name="Fishdatabase" type="Node" parent="Components" unique_id=1432647243]
+script = ExtResource("7_uia4o")

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dopssbgy65x5a"]
+
+[ext_resource type="Script" uid="uid://dnq0srxthabxg" path="res://src/gameplay/journal/journal_slot.gd" id="1_g2o6s"]
+
+[node name="journal slot" type="Button" unique_id=791131349]
+custom_minimum_size = Vector2(96, 112)
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_g2o6s")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1575754139]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="sprite" type="TextureRect" parent="VBoxContainer" unique_id=105760828]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1808596920]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="newbadge" type="Label" parent="." unique_id=1836404465]
+visible = false
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.9933676, 0.9933675, 1.4631748e-05, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "NEW!"

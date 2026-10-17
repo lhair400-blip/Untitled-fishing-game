@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bp46r1xanfatq"]
+
+[ext_resource type="Script" uid="uid://c5trd73jbsa3k" path="res://src/gameplay/fishing_minigame.gd" id="1_jjcad"]
+
+[node name="Fishing minigame" type="Node2D" unique_id=696968778]
+script = ExtResource("1_jjcad")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1587425806]
+modulate = Color(0.26618505, 0.92170763, 3.85046e-07, 1)
+visibility_layer = 1023
+offset_right = 4.0
+offset_bottom = 27.0
+fill_mode = 3
+show_percentage = false

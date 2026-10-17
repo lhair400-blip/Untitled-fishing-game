@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://f24rv4y7h51t"]
+
+[ext_resource type="Script" uid="uid://p200w6jpf0pc" path="res://journal.gd" id="1_ys5ko"]
+
+[node name="journal" type="Control" unique_id=753212094]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ys5ko")
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1222210630]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="Center" unique_id=879409764]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Stack" type="MarginContainer" parent="Center/Layout" unique_id=1519324955]
+layout_mode = 2
+
+[node name="book" type="HBoxContainer" parent="Center/Layout/Stack" unique_id=111155280]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="leftpage" type="PanelContainer" parent="Center/Layout/Stack/book" unique_id=504921787]
+layout_mode = 2
+
+[node name="content" type="VBoxContainer" parent="Center/Layout/Stack/book/leftpage" unique_id=1867755304]
+layout_mode = 2
+
+[node name="titlelabel" type="Label" parent="Center/Layout/Stack/book/leftpage/content" unique_id=1858446870]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Center/Layout/Stack/book/leftpage/content" unique_id=1086989962]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="numberlabel" type="Label" parent="Center/Layout/Stack/book/leftpage/content" unique_id=2013775137]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="counterlabel" type="Label" parent="Center/Layout/Stack/book/leftpage/content" unique_id=352949592]
+layout_mode = 2
+
+[node name="rightpage" type="PanelContainer" parent="Center/Layout/Stack/book" unique_id=679937160]
+layout_mode = 2
+
+[node name="content" type="VBoxContainer" parent="Center/Layout/Stack/book/rightpage" unique_id=401034971]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="titlelabel" type="Label" parent="Center/Layout/Stack/book/rightpage/content" unique_id=1399024494]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Center/Layout/Stack/book/rightpage/content" unique_id=1724251241]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="numberlabel" type="Label" parent="Center/Layout/Stack/book/rightpage/content" unique_id=1851110576]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="counterlabel" type="Label" parent="Center/Layout/Stack/book/rightpage/content" unique_id=1748768159]
+layout_mode = 2
+
+[node name="detail" type="PanelContainer" parent="Center/Layout/Stack" unique_id=2036368358]
+visible = false
+layout_mode = 2
+
+[node name="leftdetailpage" type="PanelContainer" parent="Center/Layout/Stack/detail" unique_id=1629694229]
+layout_mode = 2
+
+[node name="top" type="VBoxContainer" parent="Center/Layout/Stack/detail/leftdetailpage" unique_id=593121196]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="detailsprite" type="TextureRect" parent="Center/Layout/Stack/detail/leftdetailpage/top" unique_id=543891886]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="infobox" type="VBoxContainer" parent="Center/Layout/Stack/detail/leftdetailpage/top" unique_id=1856640139]
+layout_mode = 2
+
+[node name="namelabel" type="Label" parent="Center/Layout/Stack/detail/leftdetailpage/top/infobox" unique_id=1673435210]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="raritylabel" type="Label" parent="Center/Layout/Stack/detail/leftdetailpage/top/infobox" unique_id=1684712647]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="regionlabel" type="Label" parent="Center/Layout/Stack/detail/leftdetailpage/top/infobox" unique_id=669516547]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="weightlabel" type="Label" parent="Center/Layout/Stack/detail/leftdetailpage/top/infobox" unique_id=1975638654]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Center/Layout/Stack/detail/leftdetailpage/top" unique_id=1433883236]
+layout_mode = 2
+
+[node name="descriptionlabel" type="Label" parent="Center/Layout/Stack/detail/leftdetailpage/top/VBoxContainer" unique_id=2057185870]
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="backbutton" type="Button" parent="Center/Layout/Stack/detail/leftdetailpage/top/VBoxContainer" unique_id=1573357716]
+layout_mode = 2
+
+[node name="controls" type="HBoxContainer" parent="Center/Layout" unique_id=1638224639]
+layout_mode = 2
+
+[node name="prevbutton" type="Button" parent="Center/Layout/controls" unique_id=727889040]
+layout_mode = 2
+
+[node name="nextbutton" type="Button" parent="Center/Layout/controls" unique_id=40396262]
+layout_mode = 2
+
+[node name="sortbutton" type="Button" parent="Center/Layout/controls" unique_id=388159037]
+layout_mode = 2

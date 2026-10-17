@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://fw5tnuy5fgf6"]
+
+[ext_resource type="Script" uid="uid://bmyrrx0ligvj3" path="res://src/gameplay/player/player.gd" id="1_sjr3t"]
+[ext_resource type="Texture2D" uid="uid://mm2je6rdptrc" path="res://Assets/icon.svg" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://dbu5t1bwq1xd1" path="res://src/components/input component.gd" id="3_sjr3t"]
+[ext_resource type="Script" uid="uid://dltha8keu728j" path="res://src/gameplay/player/movement_component.gd" id="4_dxsvo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f60y1"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1646162788]
+script = ExtResource("1_sjr3t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2087592384]
+texture = ExtResource("1_v0iea")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=700744354]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_f60y1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1523473972]
+
+[node name="Components" type="Node" parent="." unique_id=824056088]
+
+[node name="Movement component" type="Node" parent="Components" unique_id=1277573490]
+script = ExtResource("4_dxsvo")
+
+[node name="Input component" type="Node" parent="Components" unique_id=284254323]
+script = ExtResource("3_sjr3t")
