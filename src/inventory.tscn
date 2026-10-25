@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cvi2pcrb8n2g1"]
+
+[ext_resource type="Script" uid="uid://s0iqbncd2vbw" path="res://inventory.gd" id="1_t5bew"]
+
+[node name="inventory" type="Control" unique_id=1231565738]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t5bew")
+
+[node name="dim" type="ColorRect" parent="." unique_id=480895605]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.003921569)
+
+[node name="center" type="CenterContainer" parent="." unique_id=1796547820]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="panel" type="PanelContainer" parent="center" unique_id=912129867]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+
+[node name="layout" type="VBoxContainer" parent="center/panel" unique_id=1321221146]
+layout_mode = 2
+
+[node name="titlelabel" type="Label" parent="center/panel/layout" unique_id=1385043165]
+layout_mode = 2
+text = "Inventory"
+horizontal_alignment = 1
+
+[node name="scroll" type="ScrollContainer" parent="center/panel/layout" unique_id=1196504017]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="center/panel/layout/scroll" unique_id=443190604]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 6

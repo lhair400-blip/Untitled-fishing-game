@@ -9,6 +9,7 @@ var reel: bool = false
 var action1_pressed: bool = false
 var action2_pressed: bool = false
 var toggle_journal: bool = false
+var toggle_inventory: bool = false
 
 func update() -> void:
 	# character movement
@@ -20,4 +21,4 @@ func update() -> void:
 	action1_pressed = Input.is_action_just_pressed("Action1")
 	action2_pressed = Input.is_action_just_pressed("Action2")
 	toggle_journal = Input.is_action_just_pressed("Toggle_journal")
-	
+	toggle_inventory = Input.is_action_just_pressed("Toggle_inventory")

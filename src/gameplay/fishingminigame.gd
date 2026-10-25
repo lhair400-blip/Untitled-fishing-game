@@ -28,11 +28,12 @@ var perfect := true
 func start(fish:FishData) -> void:
 	var d := fish.difficulty
 	fishicon.texture = fish.sprite
+	fishicon.modulate = Color.BLACK
 	fish_speed = lerpf(40.0, 150.0, d)
 	retarget_range = Vector2(lerpf(1.2, 0.3, d), lerpf(2.0, 0.8, d))
 	bar.size.y = lerpf(36.0, 22.0, d)
 	
-	bar_y = track.size.y
+	bar_y = track.size.y - bar.size.y
 	bar_vel = 0.0
 	fish_y = bar_y + bar.size.y / 2.0
 	fish_target = fish_y
@@ -47,7 +48,7 @@ func _process(delta: float) -> void:
 	if not active:
 		return
 	
-	if Input.is_action_just_pressed("Reel"):
+	if Input.is_action_pressed("Reel"):
 		bar_vel -= lift * delta
 	else:
 		bar_vel += gravity * delta

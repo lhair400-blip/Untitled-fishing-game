@@ -4,12 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://f00fu77evrvv" path="res://Assets/base/Light blue.png" id="2_kjyqo"]
 [ext_resource type="Script" uid="uid://cw7shsgafuc67" path="res://src/components/movement_component.gd" id="3_d3trc"]
 [ext_resource type="Script" uid="uid://dbu5t1bwq1xd1" path="res://src/components/input component.gd" id="3_sjr3t"]
-[ext_resource type="Script" uid="uid://v28md2hdwavj" path="res://src/components/fishing_component.gd" id="5_d3trc"]
-[ext_resource type="PackedScene" uid="uid://bp46r1xanfatq" path="res://src/gameplay/fishing_minigame.tscn" id="7_kjyqo"]
-[ext_resource type="Script" uid="uid://d2wr1pkkl1feo" path="res://src/components/fish_table_component.gd" id="7_uia4o"]
 [ext_resource type="Script" uid="uid://djcquhvkwhs31" path="res://src/gameplay/player/fishing.gd" id="8_uia4o"]
 [ext_resource type="PackedScene" uid="uid://cvftu30xohwcr" path="res://src/gameplay/fishingminigame.tscn" id="9_rdc6l"]
-[ext_resource type="PackedScene" uid="uid://bll6sw4tktbab" path="res://Scripts/alert.tscn" id="10_xdbtd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uia4o"]
 atlas = ExtResource("2_kjyqo")
@@ -42,9 +38,6 @@ shape = SubResource("RectangleShape2D_f60y1")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1523473972]
 zoom = Vector2(4, 4)
 
-[node name="Fishing minigame" parent="." unique_id=696968778 instance=ExtResource("7_kjyqo")]
-position = Vector2(-15, -28)
-
 [node name="Components" type="Node" parent="." unique_id=824056088]
 
 [node name="Movement" type="Node" parent="Components" unique_id=1277573490 node_paths=PackedStringArray("body")]
@@ -53,12 +46,6 @@ body = NodePath("../..")
 
 [node name="Input" type="Node" parent="Components" unique_id=284254323]
 script = ExtResource("3_sjr3t")
-
-[node name="Fishing" type="Node" parent="Components" unique_id=631198394]
-script = ExtResource("5_d3trc")
-
-[node name="Fishdatabase" type="Node" parent="Components" unique_id=1432647243]
-script = ExtResource("7_uia4o")
 
 [node name="Fishing" type="Node" parent="." unique_id=1001929911 node_paths=PackedStringArray("alert", "minigame")]
 script = ExtResource("8_uia4o")
@@ -70,14 +57,23 @@ minigame = NodePath("../fishingminigame")
 [node name="Hooktimer" type="Timer" parent="Fishing" unique_id=9734168]
 wait_time = 0.8
 
-[node name="fishingminigame" parent="." unique_id=1106770310 instance=ExtResource("9_rdc6l")]
-offset_left = -23.0
-offset_top = -35.0
-offset_right = 17.0
-offset_bottom = 5.0
-
-[node name="Alert" parent="." unique_id=1448924786 instance=ExtResource("10_xdbtd")]
+[node name="Alert" type="Label" parent="." unique_id=1122800063]
+visible = false
 offset_left = -2.0
-offset_top = -33.0
-offset_right = -2.0
-offset_bottom = -33.0
+offset_top = -32.0
+offset_right = 47.0
+offset_bottom = 14.0
+text = "!"
+
+[node name="Message" type="Label" parent="." unique_id=316071928]
+offset_left = -40.0
+offset_top = -50.0
+offset_right = 127.0
+offset_bottom = -27.0
+theme_override_font_sizes/font_size = 8
+
+[node name="fishingminigame" parent="." unique_id=1106770310 instance=ExtResource("9_rdc6l")]
+offset_left = -28.0
+offset_top = -34.0
+offset_right = 12.0
+offset_bottom = 6.0

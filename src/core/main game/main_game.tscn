@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://3bv04c7u07rb" path="res://player_data.gd" id="2_i7jkq"]
 [ext_resource type="Script" uid="uid://dxvnd74rohc6y" path="res://src/core/main game/ui.gd" id="4_kv3oy"]
 [ext_resource type="PackedScene" uid="uid://f24rv4y7h51t" path="res://src/gameplay/journal/journal.tscn" id="5_kvp8p"]
-[ext_resource type="PackedScene" uid="uid://cvftu30xohwcr" path="res://src/gameplay/fishingminigame.tscn" id="6_kvp8p"]
+[ext_resource type="PackedScene" uid="uid://cvi2pcrb8n2g1" path="res://src/inventory.tscn" id="6_kvp8p"]
 
 [node name="Main Game" type="Node2D" unique_id=1741445596]
 
@@ -25,8 +25,8 @@ script = ExtResource("4_kv3oy")
 
 [node name="journal" parent="UI" unique_id=753212094 instance=ExtResource("5_kvp8p")]
 
-[node name="fishingminigame" parent="UI" unique_id=1106770310 instance=ExtResource("6_kvp8p")]
-offset_left = -22.0
-offset_top = -47.0
-offset_right = 18.0
-offset_bottom = -7.0
+[node name="inventory" parent="UI" unique_id=1231565738 instance=ExtResource("6_kvp8p")]
+offset_left = -148.0
+offset_top = -78.0
+offset_right = -148.0
+offset_bottom = -78.0
