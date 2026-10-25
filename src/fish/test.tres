@@ -5,9 +5,10 @@
 
 [resource]
 script = ExtResource("1_wi10c")
-name = "Sardine"
+name = "Test"
 description = "A small fish"
 rarity = 3
+difficulty = 1.0
 region = 3
 sprite = ExtResource("2_0kqbb")
 max_weight = 9.223372e+18

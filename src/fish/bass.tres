@@ -8,6 +8,7 @@ script = ExtResource("1_ib8r5")
 name = "herring"
 description = "A herring"
 rarity = 1
+difficulty = 0.2
 region = 1
 sprite = ExtResource("2_gb4vs")
 min_weight = 2.0

@@ -3,7 +3,7 @@ extends Node
 
 @onready var fishdatabase: Node = $"../Fishdatabase"
 @onready var input: My_input_Component = $"../Input"
-@onready var fishing_minigame: Node2D = $"../../Fishing minigame"
+@onready var fishing_minigame: Node = $"../../fishingminigame"
 
 var start_fishing: bool = false
 var fishing: bool = false
@@ -12,7 +12,6 @@ var fail: bool = false
 
 
 func update():
-	fishing_minigame.update()
 	if start_fishing == true:
 		fishing_minigame.visible = true
 	
@@ -27,7 +26,6 @@ func update():
 		fail = true
 	
 	if success == true or fail == true:
-		fishing_minigame._ready()
 		if success == true:
 			reel_in()
 		success = false

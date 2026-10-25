@@ -5,7 +5,6 @@ extends CharacterBody2D
 @onready var fishing_component: Node = $"Components/Fishing"
 @onready var ui: CanvasLayer = $"../../UI"
 
-
 func _ready() -> void:
 	pass
 
@@ -19,7 +18,7 @@ func Variable_linker():
 	movement_component.horizontal_direction = input_component.horizontal_direction
 	movement_component.vertical_direction = input_component.vertical_direction
 	fishing_component.start_fishing = input_component.action1_pressed
-	fishing_component.fishing = input_component.space_pressed
+	fishing_component.fishing = input_component.reel
 	fishing_component.success = input_component.action2_pressed
 	ui.toggle_journal = input_component.toggle_journal
 

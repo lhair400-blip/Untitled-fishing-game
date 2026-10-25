@@ -5,6 +5,7 @@ extends Node
 var toggle_journal: bool = false
 
 func update():
+	#If the journal visible then if the button is pressed again it will close
 	if toggle_journal:
 		if journal.visible:
 			journal.close()
