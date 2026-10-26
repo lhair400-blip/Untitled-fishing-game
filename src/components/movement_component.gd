@@ -4,7 +4,7 @@ extends Node
 @export var body: CharacterBody2D
 
 # Set speed and direction
-var walk_speed = 20
+var walk_speed = 40
 var horizontal_direction: float = 0.0
 var vertical_direction: float = 0.0
 

@@ -62,3 +62,10 @@ func apply_style(color: Color, discovered: bool) -> void:
 func _pressed() -> void:
 	if fish:
 		fish_selected.emit(fish)
+
+func set_marked(marked: bool) -> void:
+	if marked:
+		label.add_theme_color_override("font_color", Color.RED)
+		apply_style(Color.RED, true)
+	else:
+		setup(fish)

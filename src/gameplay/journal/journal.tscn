@@ -125,15 +125,19 @@ autowrap_mode = 2
 
 [node name="backbutton" type="Button" parent="Center/Layout/Stack/detail/leftdetailpage/top/VBoxContainer" unique_id=1573357716]
 layout_mode = 2
+text = "Back"
 
 [node name="controls" type="HBoxContainer" parent="Center/Layout" unique_id=1638224639]
 layout_mode = 2
 
 [node name="prevbutton" type="Button" parent="Center/Layout/controls" unique_id=727889040]
 layout_mode = 2
+text = "Back"
 
 [node name="nextbutton" type="Button" parent="Center/Layout/controls" unique_id=40396262]
 layout_mode = 2
+text = "Next"
 
 [node name="sortbutton" type="Button" parent="Center/Layout/controls" unique_id=388159037]
 layout_mode = 2
+text = "Sort"

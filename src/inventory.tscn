@@ -18,9 +18,12 @@ offset_bottom = 40.0
 color = Color(0, 0, 0, 0.003921569)
 
 [node name="center" type="CenterContainer" parent="." unique_id=1796547820]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="panel" type="PanelContainer" parent="center" unique_id=912129867]
 custom_minimum_size = Vector2(600, 400)

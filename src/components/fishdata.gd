@@ -12,6 +12,11 @@ const Rarity_colors = [
 	Color(1.0, 0.8, 0.2),
 ]
 
+const Rarity_values = [5, 15, 40, 150]
+
+func get_price(weight: float) -> int:
+	return maxi(1, roundi(Rarity_values[rarity] * weight))
+
 # Gives variables for each fish
 @export var name: String
 @export_multiline var description: String

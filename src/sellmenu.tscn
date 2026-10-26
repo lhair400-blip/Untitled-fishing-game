@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://btg28onkjy3cc"]
+
+[ext_resource type="Script" uid="uid://d0d2h81e6lafc" path="res://src/sellmenu.gd" id="1_ig405"]
+
+[node name="sellmenu" type="Control" unique_id=825693084]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig405")
+
+[node name="dim" type="ColorRect" parent="." unique_id=267403776]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.003921569)
+
+[node name="center" type="CenterContainer" parent="." unique_id=679792407]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="panel" type="PanelContainer" parent="center" unique_id=593075571]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+
+[node name="layout" type="VBoxContainer" parent="center/panel" unique_id=879744369]
+layout_mode = 2
+
+[node name="titlelabel" type="Label" parent="center/panel/layout" unique_id=824003403]
+layout_mode = 2
+text = "Sell Fish"
+horizontal_alignment = 1
+
+[node name="scroll" type="ScrollContainer" parent="center/panel/layout" unique_id=533235042]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="center/panel/layout/scroll" unique_id=389762411]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 6
+
+[node name="footer" type="HBoxContainer" parent="center/panel/layout" unique_id=226289091]
+layout_mode = 2
+
+[node name="totallabel" type="Label" parent="center/panel/layout/footer" unique_id=350448446]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="confirmbutton" type="Button" parent="center/panel/layout/footer" unique_id=1968187268]
+layout_mode = 2
+text = "Confirm"
+
+[node name="confirmpopup" type="Control" parent="." unique_id=1719657225]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="dim2" type="ColorRect" parent="confirmpopup" unique_id=557821977]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.003921569)
+
+[node name="center2" type="CenterContainer" parent="confirmpopup" unique_id=981813648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="popuppanel" type="PanelContainer" parent="confirmpopup/center2" unique_id=953851203]
+layout_mode = 2
+
+[node name="popuplayout" type="VBoxContainer" parent="confirmpopup/center2/popuppanel" unique_id=2097825091]
+layout_mode = 2
+
+[node name="questionlabel" type="Label" parent="confirmpopup/center2/popuppanel/popuplayout" unique_id=225841390]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="buttons" type="HBoxContainer" parent="confirmpopup/center2/popuppanel/popuplayout" unique_id=1080240698]
+layout_mode = 2
+alignment = 1
+
+[node name="yesbutton" type="Button" parent="confirmpopup/center2/popuppanel/popuplayout/buttons" unique_id=1677821093]
+layout_mode = 2
+text = "Yes"
+
+[node name="nobutton" type="Button" parent="confirmpopup/center2/popuppanel/popuplayout/buttons" unique_id=2085749172]
+layout_mode = 2
+text = "No"

@@ -2,9 +2,12 @@
 extends Node
 
 signal inventory_changed
+signal money_changed(amount: int)
 
 var records := {}
 var new_fish := {}
+
+var money := 0 
 
 var inventory: Array[Dictionary] = []
 var next_id := 0
@@ -51,3 +54,7 @@ func is_new(fish: FishData) -> bool:
 # Says the player has viewed the details of a fish
 func mark_seen(fish: FishData) -> void:
 	new_fish.erase(fish.name)
+
+func add_money(amount: int) -> void:
+	money += amount
+	money_changed.emit(money)
