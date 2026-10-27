@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://du6w1htlfo027"]
+
+[ext_resource type="Script" uid="uid://djcpkask1q334" path="res://src/aquarium.gd" id="1_j1jlc"]
+[ext_resource type="PackedScene" uid="uid://dopssbgy65x5a" path="res://src/gameplay/journal/journal_slot.tscn" id="2_acy2p"]
+
+[node name="aquarium" type="Control" unique_id=361125380]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j1jlc")
+
+[node name="center" type="CenterContainer" parent="." unique_id=109636729]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="panel" type="PanelContainer" parent="center" unique_id=886904894]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+
+[node name="layout" type="VBoxContainer" parent="center/panel" unique_id=943599868]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="titlelabel" type="Label" parent="center/panel/layout" unique_id=1662887037]
+layout_mode = 2
+text = "Aquarium"
+horizontal_alignment = 1
+
+[node name="moneylabel" type="Label" parent="center/panel/layout" unique_id=1081137019]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="incomelabel" type="Label" parent="center/panel/layout" unique_id=748581823]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="tanks" type="HBoxContainer" parent="center/panel/layout" unique_id=1105478619]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="tank 1" parent="center/panel/layout/tanks" unique_id=791131349 instance=ExtResource("2_acy2p")]
+layout_mode = 2
+
+[node name="tank 2" parent="center/panel/layout/tanks" unique_id=1431497383 instance=ExtResource("2_acy2p")]
+layout_mode = 2
+
+[node name="picker" type="VBoxContainer" parent="center/panel/layout" unique_id=915868656]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="scroll" type="ScrollContainer" parent="center/panel/layout/picker" unique_id=1792801698]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="grid" type="GridContainer" parent="center/panel/layout/picker/scroll" unique_id=1800274988]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 6
+
+[node name="emptylabel" type="Label" parent="center/panel/layout/picker" unique_id=359783541]
+layout_mode = 2
+text = "No fish in your inventory"
+horizontal_alignment = 1
+
+[node name="backbutton" type="Button" parent="center/panel/layout/picker" unique_id=249427894]
+layout_mode = 2
+text = "Back"
