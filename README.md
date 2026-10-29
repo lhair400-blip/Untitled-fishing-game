@@ -13,8 +13,7 @@ Currently most of the features within the game are tied to keybinds as I am main
 
 So far I haven't had much time to work on things like sprite work so most of the assets I have are free assets from itch.io but in the future I hope to be able to replace everything with my own assets. 
 
-Here is the link to play:
-  [https://accurseddrifter.itch.io/untitled-fishing-game](url)
+[Click here to play] (https://accurseddrifter.itch.io/untitled-fishing-game)
 
 Current controls - 
   WASD - movement 
